@@ -1,0 +1,12 @@
+h4 {
+    position: relative;
+    &::after {
+        position: absolute;
+                    width: 35px;
+                    height: 0;
+                    border-bottom: 3px solid red;
+                    content: '';
+                    bottom: -8px;
+                    left: 0;
+    }
+}

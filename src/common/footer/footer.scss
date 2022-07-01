@@ -1,0 +1,11 @@
+
+footer {
+    padding: 40px 0;
+    background: rgb(245, 242, 242);
+    @media (max-width: 576.9px) {
+        padding: 25px 0;
+    }
+    a {
+        color: red;
+    }
+}

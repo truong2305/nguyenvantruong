@@ -1,0 +1,60 @@
+header {
+        position: relative;
+        z-index: 1;
+        width: 320px;
+        max-width: 320px;
+        padding: 40px 60px;
+        .amado-nav {
+            margin-top: 100px;
+            height: calc(100% - 150px);
+            .views {
+                color: red;
+            }
+            .follow {
+                position: relative;
+                &::after {
+                    position: absolute;
+                    width: 25px;
+                    height: 0;
+                    border-bottom: 2px solid red;
+                    content: '';
+                    bottom: -5px;
+                    left: 0;
+                }
+            }
+            .icon {
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+            li {
+                a {
+                    text-transform: uppercase;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                    padding: 20px 0;
+                    display: block;
+                    line-height: .9;
+                    color: #131212;
+                    font-weight: 600;
+                    &::after {
+                        bottom: 7px;
+                        left: 0;
+                        position: absolute;
+                        content:  "";
+                        width: 0;
+                        border-bottom: 2px solid red;
+                        height: 0;
+                    }
+                   
+                }
+                .active {
+                    &::after {
+                        transition: width 0.3s;
+                        width: 100%;
+                    }
+                }
+            } 
+        } 
+}

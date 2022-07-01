@@ -1,0 +1,35 @@
+.logo {
+    a {
+        color: #131212;
+        &:hover {
+            color: unset;
+        }
+        .logo-name {
+            font-size: 2.5rem;
+            font-weight: 600;
+            .logo-dot {
+                margin-left: 3px;
+                width: 25px;
+                height: 25px;
+                transform: translateY(4px);
+                background-color: red;
+                border-radius: 50%;
+            }
+               
+            span{
+                font-size: 0.35em;
+                letter-spacing: 0.1em;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    width: 30px;
+                    height: 0;
+                    border-bottom: 2px solid red;
+                    content: '';
+                    bottom: -8px;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
