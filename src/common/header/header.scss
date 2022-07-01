@@ -4,9 +4,11 @@ header {
         width: 320px;
         max-width: 320px;
         padding: 40px 60px;
+        display: flex;
+        flex-direction: column;
         .amado-nav {
             margin-top: 100px;
-            height: calc(100% - 150px);
+            flex: 1;
             .views {
                 color: red;
             }
@@ -57,4 +59,9 @@ header {
                 }
             } 
         } 
+        @media (max-width:576.9px) {
+            .amado-nav {
+                margin-top: 70px;
+            }
+        }
 }
