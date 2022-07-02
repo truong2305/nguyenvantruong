@@ -1,67 +1,105 @@
 header {
-        position: relative;
-        z-index: 1;
-        width: 320px;
-        max-width: 320px;
-        padding: 40px 60px;
-        display: flex;
-        flex-direction: column;
-        .amado-nav {
-            margin-top: 100px;
-            flex: 1;
-            .views {
-                color: red;
-            }
-            .follow {
-                position: relative;
-                &::after {
-                    position: absolute;
-                    width: 25px;
-                    height: 0;
-                    border-bottom: 2px solid red;
-                    content: '';
-                    bottom: -5px;
-                    left: 0;
-                }
-            }
-            .icon {
-                i {
-                    font-size: 1.5rem;
-                }
-            }
-            li {
-                a {
-                    text-transform: uppercase;
-                    display: inline-block;
-                    position: relative;
-                    z-index: 1;
-                    padding: 20px 0;
-                    display: block;
-                    line-height: .9;
-                    color: #131212;
-                    font-weight: 600;
-                    &::after {
-                        bottom: 7px;
-                        left: 0;
-                        position: absolute;
-                        content:  "";
-                        width: 0;
-                        border-bottom: 2px solid red;
-                        height: 0;
-                    }
-                   
-                }
-                .active {
-                    &::after {
-                        transition: width 0.3s;
-                        width: 100%;
-                    }
-                }
-            } 
-        } 
-        @media (max-width:576.9px) {
-            .amado-nav {
-                margin-top: 70px;
+    position: relative;
+    z-index: 1;
+    transform: translateX(0);
+    width: 320px;
+    max-width: 320px;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100%;
+    transition: 0.3s ease-out;
+    @media (max-width: 767px) {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .amado-nav {
+        transition: 0.3s;
+        margin-top: 100px;
+        flex: 1;
+        opacity: 1;
+        visibility: visible;
+        .views {
+            color: red;
+        }
+        .follow {
+            position: relative;
+            &::after {
+                position: absolute;
+                width: 25px;
+                height: 0;
+                border-bottom: 2px solid red;
+                content: "";
+                bottom: -5px;
+                left: 0;
             }
         }
+        .icon {
+            i {
+                font-size: 1.5rem;
+            }
+        }
+        li {
+            a {
+                text-transform: uppercase;
+                position: relative;
+                z-index: 1;
+                padding: 20px 0;
+                display: block;
+                line-height: 0.9;
+                color: #131212;
+                font-weight: 600;
+                &::after {
+                    bottom: 7px;
+                    left: 0;
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    border-bottom: 2px solid red;
+                    height: 0;
+                }
+            }
+            .active {
+                &::after {
+                    transition: width 0.3s;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @media (max-width: 576.9px) {
+        .amado-nav {
+            margin-top: 70px;
+        }
+    }
+}
+.mobile {
+    @media (max-width: 767px) {
+        transition: 0.3s ease-out;
+        transform: translateX(-50%);
+        opacity: 0;
+        visibility: hidden;
+        .amado-nav {
+            opacity: 0;
+            visibility: hidden;
+            li {
+                .active {
+                    &::after {
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.com {
+    opacity: 1;
+    visibility: visible;
 }

@@ -7,7 +7,7 @@ a {
 
 html, body {
     font-family: 'Josefin Sans', sans-serif;
-    @media (max-width: 576.9px) {
+    @media (max-width: 576px) {
         font-size: 14px;
     }
 }
@@ -20,6 +20,8 @@ html, body {
         margin: 0;
     }
     &-content {
+    overflow-x: hidden;
+        opacity: 1;
         padding: 1rem;
         padding-top: 60px;
         flex: 1;
@@ -28,16 +30,15 @@ html, body {
         &::-webkit-scrollbar {
             width: 4px;
           }
-          
-          /* Handle */
           &::-webkit-scrollbar-thumb {
             background: rgb(214, 216, 218);
             border-radius: 4px;
           }
-          
-          /* Handle on hover */
           &::-webkit-scrollbar-thumb:hover {
             background: rgb(192, 196, 200);
           }
+    }
+    .hidden {
+        opacity: 0;
     }
 }

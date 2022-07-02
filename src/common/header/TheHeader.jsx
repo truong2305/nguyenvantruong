@@ -3,17 +3,18 @@
 import Logo from "../logo/Logo";
 import "./header.scss";
 import {NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useContext} from "react";
 import db from "../../firebase/firebase-config";
 import {collection, getDocs, doc, updateDoc} from "firebase/firestore";
+import { MobileContext } from "../../context/mobileContext";
 
 function TheHeader() {
-    const [views, setViews] = useState(null)
-  const viewsCol = collection(db, "views");
-
+  const [views, setViews] = useState(null)
+  const mobileContext = useContext(MobileContext)
   useEffect(() => {
     const getViews = async () => {
-      const data  = await getDocs(viewsCol)
+      const data  = await getDocs(collection(db, "views"))
+      console.log(data);
       const v = Number(data.docs.map( doc => doc.data().views )[0]);      
       updateDoc(doc(db, "views", "1"), { views : v + 1 })
       setViews(v + 1)
@@ -22,30 +23,30 @@ function TheHeader() {
   }, []);
 
   return (
-    <header className='border-end pb-3 pb-sm-4'>
+    <header className={`border-end pb-3 pb-sm-4 ${mobileContext.isM ? "mobile" : "com"}`}>
       <Logo />
-      <nav className='amado-nav  d-flex flex-column justify-content-between'>
+      <nav className={`amado-nav  d-flex flex-column justify-content-between`}>
         <ul>
-          <li>
+          <li onClick={mobileContext.changeIsM}>
             <NavLink to='/' exact='true'>
               Home
             </NavLink>
           </li>
-          <li>
+          <li onClick={mobileContext.changeIsM}>
             <NavLink to='blog.html'>Blog</NavLink>
           </li>
-          <li>
+          <li onClick={mobileContext.changeIsM}>
             <NavLink to='chat.html'>Chat</NavLink>
           </li>
-          <li>
-            <NavLink to='profile.html'>Account</NavLink>
+          <li onClick={mobileContext.changeIsM}>
+            <NavLink to='profile.html'>Sign in</NavLink>
           </li>
         </ul>
         <div>
           <h6 className='mb-5'>Updating...</h6>
           <h6 className='follow'>Follow</h6>
           <nav>
-            <ul className='d-flex justify-content-between icon'>
+            <ul className='d-flex justify-content-between icon pe-5'>
               <li>
                 <a href='https://www.facebook.com/truongnv2305' target='_blank' rel='noreferrer'>
                   <i className='fab fa-facebook-f'></i>

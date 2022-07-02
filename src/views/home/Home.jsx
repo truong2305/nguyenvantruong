@@ -1,11 +1,11 @@
 import Title from "../../common/title/Title"
-import Banner from "../../components/banner/Banner"
+// import Banner from "../../components/banner/Banner"
 
 function Home() {
     return (
         <section>
             <Title title="Home page"/>
-            <Banner/>
+            {/* <Banner/> */}
         </section>
     )
 }

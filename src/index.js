@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {MobileProvider} from './context/mobileContext';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
      <BrowserRouter>
-      <App />
+      <MobileProvider>
+        <App />
+      </MobileProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -1,4 +1,4 @@
-h4 {
+.title {
     position: relative;
     &::after {
         position: absolute;
@@ -9,4 +9,22 @@ h4 {
                     bottom: -8px;
                     left: 0;
     }
+}
+
+.mobile-bar {
+    padding-top: 5px;
+    span {
+        display: block;
+        width: 30px;
+        border-bottom: 2px solid rgb(0, 0, 0);
+        &:nth-child(2) {
+            margin-top: 8px;
+            width: 25px;
+        }
+        &:nth-child(3) {
+            margin-top: 8px;
+            width: 20px;
+        }
+    }
+
 }
