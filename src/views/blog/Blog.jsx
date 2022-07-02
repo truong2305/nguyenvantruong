@@ -16,7 +16,7 @@ function Blog() {
               <div className='line'></div>
               <div className="d-flex justify-content-between">
                 <div>
-                <div className='content-time'><small>Yesterday, 23h 21p</small></div>
+                <div className='content-time'><small>Yesterday, 23:21 PM</small></div>
                 <div className='content-caption'>
                     <p>xin chào</p>
                 </div>
