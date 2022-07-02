@@ -38,9 +38,9 @@ html, body {
             background: rgb(192, 196, 200);
           }
     }
-    .hidden {
-        @media (max-width:767px) {
-            opacity: 0;
-        }
-    }
+    // .hidden {
+    //     @media (max-width:767px) {
+    //         opacity: 0;
+    //     }
+    // }
 }

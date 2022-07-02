@@ -7,12 +7,10 @@ import Home from "./views/home/Home"
 import Blog from "./views/blog/Blog"
 import Chat from "./views/chat/Chat"
 import Profile from "./views/profile/Profile"
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
-import { MobileContext } from "./context/mobileContext";
 function App() {
   const location = useLocation();
-  const mobileContext = useContext(MobileContext)
   useEffect(() => {
     switch(location.pathname) {
       case '/':
@@ -37,7 +35,7 @@ function App() {
     <div className='App'>
       <main className='main d-flex'>
       <TheHeader/>
-        <div className={`main-content ${ mobileContext.isM ? '' : 'hidden'}`}>
+        <div className="main-content">
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/blog.html' element={<Blog/>} />
