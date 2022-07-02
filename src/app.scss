@@ -39,6 +39,8 @@ html, body {
           }
     }
     .hidden {
-        opacity: 0;
+        @media (max-width:767px) {
+            opacity: 0;
+        }
     }
 }

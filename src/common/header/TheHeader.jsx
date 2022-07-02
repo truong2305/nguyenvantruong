@@ -14,7 +14,6 @@ function TheHeader() {
   useEffect(() => {
     const getViews = async () => {
       const data  = await getDocs(collection(db, "views"))
-      console.log(data);
       const v = Number(data.docs.map( doc => doc.data().views )[0]);      
       updateDoc(doc(db, "views", "1"), { views : v + 1 })
       setViews(v + 1)
