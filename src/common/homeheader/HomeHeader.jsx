@@ -3,6 +3,7 @@
 import "./homeheader.scss";
 import avt from '../../assets/images/avt.jpg'
 import TypicalBase from "../../components/typical/TypiacalBase";
+
 function HomeHeader() {
   return (
     <div className='home-header'>
@@ -10,7 +11,7 @@ function HomeHeader() {
           <div className="row align-items-center text-center text-xl-start">
             <div className="col-xl-7 col-10 offset-1 offset-xl-0 mt-4 mt-xl-0">
               <h1 className="home-title mb-0">
-                Hi, I'm Nguyen Van Truong
+                Hi, I'm <span>Nguyen Van Truong</span>
               <TypicalBase/>
               </h1>
               
