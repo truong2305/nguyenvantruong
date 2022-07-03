@@ -7,6 +7,10 @@ import {useEffect, useState, useContext} from "react";
 import db from "../../firebase/firebase-config";
 import {collection, getDocs, doc, updateDoc} from "firebase/firestore";
 import { MobileContext } from "../../context/mobileContext";
+import ig from '../../assets/images/ig.webp'
+import tt from '../../assets/images/tt.png'
+import fb from '../../assets/images/fb.png'
+
 
 function TheHeader() {
   const [views, setViews] = useState(null)
@@ -44,21 +48,21 @@ function TheHeader() {
         <div>
           <h6 className='mb-5'>Updating...</h6>
           <h6 className='follow'>Follow</h6>
-          <nav>
+          <nav className="social mt-4">
             <ul className='d-flex justify-content-between icon pe-5'>
               <li>
                 <a href='https://www.facebook.com/truongnv2305' target='_blank' rel='noreferrer'>
-                  <i className='fab fa-facebook-f'></i>
-                </a>
-              </li>
-              <li>
-                <a href='https://www.instagram.com/nvt230500/' target='_blank' rel='noreferrer'>
-                  <i className='fab fa-tiktok'></i>
+                <img src={fb} alt="facebook" className="fb"/>
                 </a>
               </li>
               <li>
                 <a href='https://www.tiktok.com/@nguyenvantruong2305' target='_blank' rel='noreferrer'>
-                  <i className='fab fa-instagram'></i>
+                <img src={tt} alt="tiktok" />
+                </a>
+              </li>
+              <li>
+                <a href='https://www.instagram.com/nvt230500' target='_blank' rel='noreferrer'>
+                  <img src={ig} alt="instagram"  />
                 </a>
               </li>
             </ul>
