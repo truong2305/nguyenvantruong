@@ -1,25 +1,33 @@
-
 .login {
     text-align: center;
-    &-form {
-        margin-top: 200px;
-    }
+
     .profile {
         margin-top: 100px;
     }
-    button {
-        background-image: linear-gradient(315deg, #4182ea 0%, #0595e8 74%);
-        border: none;
-        outline: none;
-        padding: 0.5rem 1rem;
-        border-radius: 10px;
-        transition: 0.3s;
-        color: white;
-        i {
-            font-size: 1.5rem;
+    &-form {
+        margin-top: 200px;
+        button {
+            color: black;
+            outline: none;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: 0.3s;
+            img {
+                width: 30px;
+                height: auto;
+                margin-right: 0.75rem;
+            }
+            background-image: linear-gradient(315deg, #f8edef 0%, #e1e9f5 74%);
+            &:hover {
+                background-image: linear-gradient(315deg, #e1e9f5 0%, #f8edef 74%);
+            }
         }
-        &:hover {
-            background-image: linear-gradient(315deg, #0595e8 0%, #4182ea 74%);
+        .fb {
+            background-image: linear-gradient(315deg, #498dfa 0%, #09c6f9 74%);
+            &:hover {
+                background-image: linear-gradient(315deg, #09c6f9 0%, #498dfa 74%);
+            }
+            color: white;
         }
     }
     .avt {
@@ -28,7 +36,7 @@
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto;
-        @media (max-width : 576px) {
+        @media (max-width: 576px) {
             width: 100px;
             height: 100px;
         }
@@ -40,15 +48,17 @@
     }
     .sign-out {
         button {
+            outline: none;
+            border: none;
             background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
             color: rgb(255, 255, 255);
             font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
             transition: 0.3s;
             &:hover {
-                background-image: linear-gradient(315deg, #fe547c  0%,  #fc8a67 100%);
+                background-image: linear-gradient(315deg, #fe547c 0%, #fc8a67 100%);
             }
         }
     }
-   
 }
-

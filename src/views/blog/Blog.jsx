@@ -49,7 +49,7 @@ function Blog() {
                 </div>
                 <div>
                   <div className='content-like'>
-                  <i class="fas fa-heart"></i>
+                  <i className="fas fa-heart"></i>
                   </div>
                 </div>
               </div>

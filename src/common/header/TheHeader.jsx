@@ -38,7 +38,7 @@ function TheHeader() {
             <NavLink to='chat.html'>Chat</NavLink>
           </li>
           <li onClick={mobileContext.changeIsM}>
-            <NavLink to='profile.html'>{ mobileContext.user !== null ? "profile" : 'Sign in' }</NavLink>
+            <NavLink to='profile.html'>{ mobileContext.user !== null ? "user" : 'Sign in' }</NavLink>
           </li>
         </ul>
         <div>

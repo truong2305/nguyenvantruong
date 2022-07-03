@@ -1,10 +1,12 @@
 /** @format */
 
-import {signInWithPopup, FacebookAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
+import {signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
 import {useContext} from "react";
 import {auth} from "../../firebase/firebase-config";
 import { MobileContext } from '../../context/mobileContext';
 import "./login.scss";
+import gg from '../../assets/images/gg.png'
+import fb from '../../assets/images/fb.png'
 function Login() {
   const userContext = useContext(MobileContext);
   onAuthStateChanged(auth, (currentUser) => {
@@ -14,9 +16,15 @@ function Login() {
       userContext.setUser(null);
     }
   });
-  const signIn = () => {
+  const signInWithFB = () => {
     const provider = new FacebookAuthProvider();
     signInWithPopup(auth, provider);
+  };
+  const signInWithGG = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider).then( res => {
+      console.log(res);
+    });
   };
   const logOut = async () => {
     await signOut(auth);
@@ -35,8 +43,14 @@ function Login() {
         </div>
       ) : (
         <div className='login-form '>
-          <button onClick={signIn} className='d-flex align-items-center mx-auto'>
-            <i className='fab fa-facebook me-3'></i> Sign in with Facebook
+          <button onClick={signInWithFB} className='d-flex align-items-center mx-auto border fb'>
+          <img src={fb} alt="facebook" /> Sign in with Facebook
+          </button>
+          <div className="my-4" >
+            <small>OR</small>
+          </div>
+          <button onClick={signInWithGG} className='d-flex align-items-center mx-auto border'>
+          <img src={gg} alt="google" /> Sign in with Google
           </button>
         </div>
       )}
