@@ -16,10 +16,14 @@
   }
   .home-title {
   color: #0b1f41;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 26px;
+    span {
+      font-size: 0.75em;
+      color: red;
+    }
   }
   @media (max-width: 1200px) {
     .home-title {

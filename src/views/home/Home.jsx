@@ -1,4 +1,4 @@
-import HomeHeader from "../../common/animationText/HomeHeader"
+import HomeHeader from "../../common/homeheader/HomeHeader"
 import Title from "../../common/title/Title"
 // import Banner from "../../components/banner/Banner"
 
