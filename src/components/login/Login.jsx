@@ -36,7 +36,7 @@ function Login() {
       ) : (
         <div className='login-form '>
           <button onClick={signIn} className='d-flex align-items-center mx-auto'>
-            <i className='fab fa-facebook me-3'></i> Login with Facebook
+            <i className='fab fa-facebook me-3'></i> Sign in with Facebook
           </button>
         </div>
       )}
