@@ -13,14 +13,13 @@ html, body {
 }
 
 .main {
-    height: 100vh;
+        height: 100vh;
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
     &-content {
-    overflow-x: hidden;
         opacity: 1;
         padding: 1rem;
         padding-top: 60px;
@@ -38,9 +37,4 @@ html, body {
             background: rgb(192, 196, 200);
           }
     }
-    // .hidden {
-    //     @media (max-width:767px) {
-    //         opacity: 0;
-    //     }
-    // }
 }

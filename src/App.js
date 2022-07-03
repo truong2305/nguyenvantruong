@@ -9,6 +9,7 @@ import Chat from "./views/chat/Chat"
 import Profile from "./views/profile/Profile"
 import { useEffect } from "react";
 import {Routes, Route, useLocation} from "react-router-dom";
+import Admin from "./views/admin/Admin";
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -41,6 +42,7 @@ function App() {
             <Route path='/blog.html' element={<Blog/>} />
             <Route path='/chat.html' element={<Chat/>} />
             <Route path='/profile.html' element={<Profile/>} />
+            <Route path='/admin.html' element={<Admin/>} />
           </Routes>
         </div>
       </main>

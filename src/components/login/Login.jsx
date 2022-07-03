@@ -1,17 +1,17 @@
 /** @format */
 
 import {signInWithPopup, FacebookAuthProvider, onAuthStateChanged, signOut} from "firebase/auth";
-import {useState} from "react";
+import {useContext} from "react";
 import {auth} from "../../firebase/firebase-config";
+import { MobileContext } from '../../context/mobileContext';
 import "./login.scss";
 function Login() {
-  const [user, setUser] = useState(null);
-
+  const userContext = useContext(MobileContext);
   onAuthStateChanged(auth, (currentUser) => {
     if (currentUser !== null) {
-      setUser(currentUser);
+      userContext.setUser(currentUser);
     } else {
-      setUser(null);
+      userContext.setUser(null);
     }
   });
   const signIn = () => {
@@ -23,12 +23,12 @@ function Login() {
   };
   return (
     <div className="login">
-      {user != null ? (
+      {userContext.user != null ? (
         <div className="profile">
           <div className="avt">
-            <img src={user.photoURL} alt='' />
+            <img src={userContext.user.photoURL} alt='' />
           </div>
-          <h4 className="mt-5">{user.displayName}</h4>
+          <h4 className="mt-5">{userContext.user.displayName}</h4>
           <div className="sign-out mt-4" onClick={logOut}>
             <button>Sign out</button>
           </div>

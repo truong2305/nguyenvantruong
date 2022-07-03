@@ -14,3 +14,17 @@
 .content-time {
     opacity: 0.8;
 }
+.content-like {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(red, 0.1);
+    overflow: hidden;
+    i {
+        color: red;
+        font-size: 1.25rem;
+    }
+}
