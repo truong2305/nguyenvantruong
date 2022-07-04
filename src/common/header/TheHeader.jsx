@@ -18,7 +18,7 @@ function TheHeader() {
   useEffect(() => {
     const getViews = async () => {
       const data  = await getDocs(collection(db, "views"))
-      const v = Number(data.docs.map( doc => doc.data().views )[0]);      
+      const v = data.docs.map( doc => doc.data().views )[0];      
       updateDoc(doc(db, "views", "1"), { views : v + 1 })
       setViews(v + 1)
     }
@@ -48,7 +48,7 @@ function TheHeader() {
         <div>
           <h6 className='mb-5'>Updating...</h6>
           <h6 className='follow'>Follow</h6>
-          <nav className="social mt-4">
+          <div className="social mt-4">
             <ul className='d-flex justify-content-between icon pe-5'>
               <li>
                 <a href='https://www.facebook.com/truongnv2305' target='_blank' rel='noreferrer'>
@@ -66,7 +66,7 @@ function TheHeader() {
                 </a>
               </li>
             </ul>
-          </nav>
+          </div>
           <h6 className='mt-5 mb-0'>
             { views } <span className='views'>views</span>
           </h6>

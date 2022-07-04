@@ -26,6 +26,9 @@
     .text-typical {
        font-size: 0.5em;
        color: #0b1f41;
+       @media (max-width: 576px) {
+        font-size: 0.75em;
+       }
     }
   }
   @media (max-width: 1200px) {
