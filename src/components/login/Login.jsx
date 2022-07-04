@@ -22,9 +22,7 @@ function Login() {
   };
   const signInWithGG = () => {
     const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider).then((res) => {
-      console.log(res);
-    });
+    signInWithPopup(auth, provider)
   };
   const logOut = async () => {
     await signOut(auth);
