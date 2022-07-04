@@ -31,7 +31,7 @@ function Blog() {
       <Title title='My blog' />
       <div className='row'>
         {posts.map( post => 
-          <div key={post.createdAt} className='col-12 col-sm-6 col-md-12 mb-4 col-lg-6 col-xl-4'>
+          <div key={post.createdAt} className='col-12 col-sm-6 col-md-8 mb-4 col-lg-6 col-xl-4 offset-md-2 offset-lg-3 offset-xl-4 offset-sm-3'>
             
             <div className='content'>
               <div className='content-images'>
