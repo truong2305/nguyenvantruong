@@ -38,7 +38,7 @@ function Login() {
               <img src={userContext.user.photoURL} alt='' />
             </div>
             <div className="provider">
-              <img src={userContext.user.provider === "facebook" ? fb : gg} alt={userContext.user.provider === "facebook" ? "facebook" : "google"} />
+              <img src={userContext.user.providerData[0].providerId !== "google.com" ? fb : gg} alt={userContext.user.providerData[0].providerId !== "google.com" ? "facebook" : "google"} />
             </div>
           </div>
           <h4 className='mt-5'>{userContext.user.displayName}</h4>
