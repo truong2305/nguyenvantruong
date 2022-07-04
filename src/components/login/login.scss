@@ -4,6 +4,15 @@
     .profile {
         margin-top: 100px;
     }
+    h4 {
+        span {
+            img {
+                width: 30px;
+                height: auto;
+                margin-right: 0.75rem;
+            }
+        }
+    }
     &-form {
         margin-top: 200px;
         button {
@@ -32,6 +41,25 @@
             }
             color: white;
         }
+    }
+    .avt-wrapper {
+        position: relative;
+        display: inline-block;
+        .provider {
+            width: 40px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: white;
+            border-radius: 50%;
+            padding: 0.5rem;
+            img {
+                width: 100%;
+                height: auto;
+                
+            }
+        }
+       
     }
     .avt {
         width: 120px;
